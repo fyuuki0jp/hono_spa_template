@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode client && vite build",
-    "start": "cd dist && node server.mjs"
+    "start": "cd dist && node server.mjs",
+    "lint": "yarn biome check --fix ./src/**/*"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
