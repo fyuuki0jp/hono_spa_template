@@ -1,13 +1,13 @@
-import type { APISchema } from "@/api/index";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { Link, createLazyRoute } from "@tanstack/react-router";
-import { hc } from "hono/client";
+import type { APISchema } from '@/api/index';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { Link, createLazyRoute } from '@tanstack/react-router';
+import { hc } from 'hono/client';
 
-const client = hc<APISchema>("/api");
+const client = hc<APISchema>('/api');
 
 const Component = () => {
 	const { data, isLoading } = useQuery({
-		queryKey: ["todos"],
+		queryKey: ['todos'],
 		queryFn: async (param) => {
 			const res = await client.hello.$get();
 			return await res.json();
@@ -23,6 +23,6 @@ const Component = () => {
 	);
 };
 
-export const Route = createLazyRoute("/")({
+export const Route = createLazyRoute('/')({
 	component: Component,
 });

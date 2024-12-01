@@ -1,4 +1,4 @@
-import { Link, createLazyRoute } from "@tanstack/react-router";
+import { Link, createLazyRoute } from '@tanstack/react-router';
 
 function RouteComponent() {
 	return (
@@ -9,6 +9,6 @@ function RouteComponent() {
 	);
 }
 
-export const Route = createLazyRoute("/test")({
+export const Route = createLazyRoute('/test')({
 	component: RouteComponent,
 });
