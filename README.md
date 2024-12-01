@@ -1,6 +1,12 @@
+
+Hono+TanStack Router+Viteで構築するSPAのテンプレートリポジトリ
+
+UIライブラリ：TailwindCSS+shadcn/ui
+linter&formatter：Biome
+
 ```
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
 ```
