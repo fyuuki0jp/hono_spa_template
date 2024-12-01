@@ -4,7 +4,7 @@ import api from "@/api/index";
 
 const app = new Hono();
 
-app.route("/api", api);
+app.route("/", api);
 
 app.get("*", (c) => {
 	return c.html(

@@ -3,13 +3,13 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { Link, createLazyRoute } from '@tanstack/react-router';
 import { hc } from 'hono/client';
 
-const client = hc<APISchema>('/api');
+const client = hc<APISchema>('/');
 
 const Component = () => {
 	const { data, isLoading } = useQuery({
-		queryKey: ['todos'],
+		queryKey: ['hello'],
 		queryFn: async (param) => {
-			const res = await client.hello.$get();
+			const res = await client.api.hello.$get();
 			return await res.json();
 		},
 	});
