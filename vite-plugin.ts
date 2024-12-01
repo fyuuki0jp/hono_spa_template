@@ -1,9 +1,9 @@
-import { builtinModules } from 'module'
+import { builtinModules } from 'node:module'
 import type { Plugin, UserConfig } from 'vite'
 
 export const nodeServerPlugin = (): Plugin => {
   const virtualEntryId = 'virtual:node-server-entry-module'
-  const resolvedVirtualEntryId = '\0' + virtualEntryId
+  const resolvedVirtualEntryId = `\0${virtualEntryId}`
 
   return {
     name: '@hono/vite-node-server',
