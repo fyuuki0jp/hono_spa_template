@@ -1,8 +1,8 @@
 
 Hono+TanStack Router+Viteで構築するSPAのテンプレートリポジトリ
 
-UIライブラリ：TailwindCSS+shadcn/ui
-linter&formatter：Biome
+- UIライブラリ：TailwindCSS+shadcn/ui
+- linter&formatter：Biome
 
 ```
 yarn install
